@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            width: 200px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: color(srgb 102 122 234);
+            color: white;
+            border-radius: 8px;
+            margin: 0;
+        }
+        
+        .container {
+            text-align: center;
+        }
+        
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .status {
+            margin: 15px 0;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .status.active {
+            background: rgba(46, 204, 113, 0.3);
+            border: 1px solid #2ecc71;
+        }
+        
+        .status.inactive {
+            background: rgba(231, 76, 60, 0.3);
+            border: 1px solid #e74c3c;
+        }
+        
+        .toggle-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background 0.3s;
+            width: 100%;
+        }
+        
+        .toggle-btn:hover {
+            background: #2980b9;
+        }
+        
+        .toggle-btn:active {
+            transform: translateY(1px);
+        }
+        
+        .logo {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        
+        .info {
+            font-size: 12px;
+            margin-top: 15px;
+            opacity: 0.9;
+            line-height: 1.4;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images.png" alt="Extension Logo" class="logo">
+        <div class="title">AMITY</div>
+        <div id="status" class="status active">
+            <span id="statusText">Amity</span>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+/* YouTube Prank Extension Styles */
+
+/* Hide skip buttons during ads */
+.ytp-ad-skip-button,
+.ytp-skip-ad-button,
+.ytp-ad-skip-button-modern,
+.videoAdUiSkipButton,
+.ytp-ad-skip-button-container .ytp-button {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Hide play/pause controls during ads */
+.ad-showing .ytp-play-button,
+.ad-showing .ytp-pause-button,
+.ad-showing .ytp-large-play-button,
+.ytp-ad-player-overlay .ytp-play-button,
+.ytp-ad-player-overlay .ytp-pause-button,
+.ytp-ad-player-overlay .ytp-large-play-button {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Disable video clicking during ads */
+.ad-showing video,
+.ytp-ad-player-overlay video {
+    pointer-events: none !important;
+}
+
+/* Hide volume controls */
+.ytp-volume-area,
+.ytp-volume-panel,
+.ytp-mute-button,
+.ytp-volume-slider,
+.ytp-volume-slider-handle {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Hide any elements with skip in the class name during ads */
+.ad-showing .ytp-ad-skip-button,
+.ad-showing [class*="skip"],
+.ad-showing [class*="Skip"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Additional selectors for different YouTube layouts */
+ytd-player[ad-showing] .ytp-ad-skip-button-container,
+ytd-player[ad-showing] .ytp-ad-skip-button,
+.html5-video-player.ad-showing .ytp-ad-skip-button {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Hide volume in settings menu as well */
+.ytp-settings-menu .ytp-menuitem[role="menuitem"]:has(.ytp-menuitem-label:contains("Volume")) {
+    display: none !important;
+}
+
+/* Disable hover effects on hidden elements */
+.ytp-ad-skip-button:hover,
+.ytp-volume-area:hover {
+    display: none !important;
+}
+
+/* Make sure ads can't be skipped by hiding any clickable elements */
+.ytp-ad-player-overlay button,
+.ytp-ad-player-overlay .ytp-button {
+    pointer-events: none !important;
+}
+
+/* Extension active indicator (optional) */
+body.yt-prank-active .ytp-chrome-top {
+    border-top: 2px solid #ff0000;
+}

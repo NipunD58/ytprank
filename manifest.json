@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "AMITY",
+  "version": "1.0",
+  "description": "AMITY",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AMITY"
+  },
+  "icons": {
+    "16": "images.png",
+    "48": "images.png",
+    "128": "images.png"
+  }
+}
